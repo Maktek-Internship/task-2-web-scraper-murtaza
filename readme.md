@@ -18,4 +18,5 @@ This project scrapes a given website for internal links and content, cleans the 
 ## Configuration
 
 Edit the `config.py` file to change settings like headers, unwanted phrases, boilerplate terms, and segment length.
+
 Edit the `scraper.py` file to change the URL 
