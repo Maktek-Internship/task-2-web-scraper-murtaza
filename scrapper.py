@@ -78,5 +78,5 @@ def scrape_website(base_url):
     save_as_jsonl(all_data, "scrapped_data.jsonl")
 
 if __name__ == "__main__":
-    base_url = "https://saeedanwar.pro/"
+    base_url = "example.com" #add a real url before running the program
     scrape_website(base_url)
