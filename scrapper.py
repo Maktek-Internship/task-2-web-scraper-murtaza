@@ -22,7 +22,11 @@ def clean_and_prepare_data(content):
     content = filter_unwanted_content(content, UNWANTED_PHRASES)
     content = normalize_text(content)
     content = remove_boilerplate(content, BOILERPLATE_TERMS)
-    return segment_text(content, MAX_SEGMENT_LENGTH)
+    
+    # If there are issues with the segmented text (e.g., segments being too short or too long),
+    # consider adjusting the max_length parameter or avoid using segment_text altogether.
+    
+    return segment_text(content, MAX_SEGMENT_LENGTH) 
 
 def get_internal_links_and_content(url):
     try:
