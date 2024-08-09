@@ -17,7 +17,7 @@ def is_internal_link(url, base_url):
             (url_netloc == base_netloc or url_netloc.endswith('.' + base_netloc.split('.')[-1])))
 
 def clean_and_prepare_data(content):
-    content = remove_html_tags(content)
+    content = remove_html_tags(content) #removes html tags including images
     content = clean_text(content)
     content = filter_unwanted_content(content, UNWANTED_PHRASES)
     content = normalize_text(content)
